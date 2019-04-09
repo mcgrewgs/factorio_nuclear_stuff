@@ -1,13 +1,9 @@
 --item.lua
 
 local templateItem = "electric-mining-drill"
-local templateItemGroup = "item"
+local templateItemGroup = "mining-drill"
 local newItemName = "nuclear-mining-drill"
 local technologyName = "nuclear-power"
-
-
-
-
 
 -- ["electric-mining-drill"] = {
 --   flags = {
@@ -23,7 +19,7 @@ local technologyName = "nuclear-power"
 --   type = "item"
 -- }
 
-local newItem = table.deepcopy(data.raw[templateItemGroup][templateItem])
+local newItem = table.deepcopy(data.raw["item"][templateItem])
 
 newItem.name = newItemName
 newItem.icons = {
@@ -100,7 +96,7 @@ data:extend{ newItem }
 --   type = "mining-drill"
 -- },
 
-local newEntity = table.deepcopy(data.raw["mining-drill"][templateItem])
+local newEntity = table.deepcopy(data.raw[templateItemGroup][templateItem])
 newEntity.name = newItem.name
 newEntity.minable.result = newItem.name
 newEntity.resource_searching_radius = 4.49
