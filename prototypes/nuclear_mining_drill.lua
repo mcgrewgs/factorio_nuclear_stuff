@@ -107,7 +107,7 @@ newEntity.resource_searching_radius = 4.49
 newEntity.module_specification.module_slots = 6
 newEntity.mining_power = 3.5
 newEntity.mining_speed = 2.0
-newEntity.energy_usage = "1W"
+newEntity.energy_usage = "10kW"
 
 data:extend{ newEntity }
 
